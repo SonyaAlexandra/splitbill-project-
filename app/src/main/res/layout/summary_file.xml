@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title Section -->
+        <TextView
+            android:id="@+id/tv_summary_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="summary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:textColor="#000000" />
+
+        <!-- Total Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/totallabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="total:"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/totalvalue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Person 1 Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="16dp"
+            android:marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_person_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="person 1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="8dp" />
+
+            <!-- Sub-details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="total"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_person_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:gravity="end"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="paid"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <CheckBox
+                    android:id="@+id/tv_person_paid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Edit"
+                    android:textSize="15sp"
+                    android:textColor="#2196F3" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
