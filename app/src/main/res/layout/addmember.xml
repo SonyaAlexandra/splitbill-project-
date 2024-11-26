@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="member input"
+        android:text="Member Input"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -26,6 +26,7 @@
         android:background="#D3D3D3"
         android:layout_marginBottom="16dp" />
 
+    <!-- Spinner and Label -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,21 +49,26 @@
     </LinearLayout>
 
     <!-- Dynamic Input Fields Container -->
-    <LinearLayout
-        android:id="@+id/input_container"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical" />
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
     <!-- Done Button -->
     <Button
-        android:id="@+id/btn_done"
+        android:id="@+id/btndone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#808080"
         android:text="DONE"
         android:textColor="#FFFFFF" />
-    </LinearLayout>
-
+</LinearLayout>
