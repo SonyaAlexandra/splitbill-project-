@@ -23,14 +23,75 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="#D3D3D3" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/totallabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="total:"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/totalvalue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
+
+        <!-- Summary Button (Initially Hidden) -->
+        <ListView
+            android:id="@+id/listViewOrders"
+            android:layout_width="match_parent"
+            android:layout_height="487dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/btnSummaryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnSummary"
+                android:layout_width="127dp"
+                android:layout_height="82dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:backgroundTint="#808080"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="summary"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </FrameLayout>
 
-
+    <!-- Bottom Action Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="125dp"
@@ -38,7 +99,7 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-
+        <!-- Add Item Button -->
         <LinearLayout
             android:layout_width="10dp"
             android:layout_height="match_parent"
@@ -47,6 +108,7 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/btnAddItem"
                 android:layout_width="127dp"
                 android:layout_height="82dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -62,7 +124,7 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-
+        <!-- Camera Button -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -86,6 +148,7 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <!-- Add Member Button -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -108,5 +171,6 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
